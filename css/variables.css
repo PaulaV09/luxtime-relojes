@@ -1,0 +1,28 @@
+/* Variables CSS Globales - LuxTime */
+:root {
+  /* Colores principales */
+  --primary-color: #2563eb;
+  --secondary-color: #1e40af;
+  --accent-color: #3b82f6;
+  --blue-light: #60a5fa;
+  --blue-dark: #1d4ed8;
+  
+  /* Colores de texto */
+  --text-dark: #1e293b;
+  --text-light: #64748b;
+  --text-blue: #2563eb;
+  
+  /* Colores de fondo */
+  --bg-light: #f8fafc;
+  --bg-dark: #1e40af;
+  --white: #ffffff;
+  
+  /* Sombras */
+  --shadow-light: 0 2px 10px rgba(37, 99, 235, 0.1);
+  --shadow-medium: 0 4px 20px rgba(37, 99, 235, 0.2);
+  --shadow-heavy: 0 8px 30px rgba(37, 99, 235, 0.3);
+  
+  /* Otros */
+  --border-radius: 12px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
