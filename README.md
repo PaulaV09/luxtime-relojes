@@ -168,7 +168,18 @@ Pagina de reloj/
 - **Fotografías de productos** icónicos
 - **Contenido visual** para la sección de historia
 
+## Wireframe
+![](https://i.ibb.co/nhkV8ZC/Lux-Time-Wireframe-pdf.png)
+![](https://i.ibb.co/FGRWpwt/Wireframe-Cat-logo-de-Relojes-pdf.png)
+![](https://i.ibb.co/PZ8WTbdQ/Lux-Time-Product-Page-Wireframe-pdf.png)
+![](https://i.ibb.co/cKzt0hhH/Wireframe-Historia-de-la-Empresa-Lux-Time-pdf.png)
+![](https://i.ibb.co/fVHrN5rT/Wireframe-Lux-Time-Contacto-pdf.png)
+
+## Netifly
+
+
+
 ## ✍️ Autores
 
-**Desarrollado por: Valentina Mancilla**
+Desarrollado por: Valentina Mancilla
 
