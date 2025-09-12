@@ -169,6 +169,7 @@ Pagina de reloj/
 - **Contenido visual** para la sección de historia
 
 ## Wireframe
+
 ![](https://i.ibb.co/nhkV8ZC/Lux-Time-Wireframe-pdf.png)
 
 ![](https://i.ibb.co/FGRWpwt/Wireframe-Cat-logo-de-Relojes-pdf.png)
