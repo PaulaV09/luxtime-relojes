@@ -786,6 +786,16 @@ input[type="radio"]:checked + .thumbnail-img {
   .engraving-option {
     padding: 10px 15px;
   }
+  
+  .you-may-also-like h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .you-may-also-like h2 {
+    font-size: 2.5rem;
+  }
 }
 
 /* You May Also Like Section */
@@ -801,11 +811,13 @@ input[type="radio"]:checked + .thumbnail-img {
 }
 
 .you-may-also-like h2 {
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--text-dark);
-  margin-bottom: 40px;
+  font-size: 5rem;
+  font-weight: 900;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
   text-align: center;
+  text-shadow: 0 6px 12px rgba(37, 99, 235, 0.5), 0 2px 4px rgba(37, 99, 235, 0.3);
+  letter-spacing: -2px;
 }
 
 /* Carrusel con barra de desplazamiento */
@@ -883,24 +895,26 @@ input[type="radio"]:checked + .thumbnail-img {
 }
 
 .product-card h3 {
-  color: var(--text-dark);
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
-  margin: 0 0 8px 0;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  letter-spacing: -0.3px;
 }
 
 .product-card .model {
+  font-weight: 500;
+  margin: 8px 0;
   color: var(--text-light);
   font-size: 14px;
-  margin: 0 0 10px 0;
-  font-weight: 500;
 }
 
 .product-card .price {
-  color: var(--primary-color);
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 700;
-  margin: 0 0 15px 0;
+  margin-bottom: 16px;
+  color: var(--primary-color);
+  letter-spacing: -0.5px;
 }
 
 /* BOTÓN DE VER DETALLES - Estilo del catálogo */
@@ -920,131 +934,6 @@ input[type="radio"]:checked + .thumbnail-img {
   transform: translateX(4px);
 }
 
-.you-may-also-like .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.you-may-also-like h2 {
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--text-dark);
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-/* Carrusel con barra de desplazamiento */
-.products-carousel {
-  position: relative;
-  overflow: hidden;
-  padding: 20px 0;
-}
-
-.carousel-container {
-  overflow-x: auto;
-  overflow-y: hidden;
-  border-radius: 12px;
-  padding: 10px 0;
-  /* Estilos personalizados para la barra de desplazamiento */
-  scrollbar-width: thin;
-  scrollbar-color: var(--primary-color) var(--bg-light);
-}
-
-.carousel-container::-webkit-scrollbar {
-  height: 8px;
-}
-
-.carousel-container::-webkit-scrollbar-track {
-  background: var(--bg-light);
-  border-radius: 4px;
-}
-
-.carousel-container::-webkit-scrollbar-thumb {
-  background: var(--primary-color);
-  border-radius: 4px;
-  transition: background 0.3s ease;
-}
-
-.carousel-container::-webkit-scrollbar-thumb:hover {
-  background: var(--secondary-color);
-}
-
-.carousel-track {
-  display: flex;
-  gap: 30px;
-  padding: 20px 0;
-  min-width: max-content;
-}
-
-.product-card {
-  flex: 0 0 280px;
-  background: var(--white);
-  border-radius: 12px;
-  box-shadow: var(--shadow-light);
-  overflow: hidden;
-  transition: var(--transition);
-  border: 2px solid transparent;
-  padding: 20px;
-  text-align: center;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-medium);
-  border-color: var(--primary-color);
-}
-
-.product-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  transition: var(--transition);
-}
-
-.product-card:hover img {
-  transform: scale(1.05);
-}
-
-.product-card h3 {
-  color: var(--text-dark);
-  font-size: 16px;
-  font-weight: 600;
-  margin: 0 0 8px 0;
-}
-
-.product-card .model {
-  color: var(--text-light);
-  font-size: 14px;
-  margin: 0 0 10px 0;
-  font-weight: 500;
-}
-
-.product-card .price {
-  color: var(--primary-color);
-  font-size: 18px;
-  font-weight: 700;
-  margin: 0 0 15px 0;
-}
-
-/* BOTÓN DE VER DETALLES - Estilo del catálogo */
-.ver-detalles {
-  display: inline-block;
-  margin-top: 1rem;
-  color: var(--primary-color);
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  transition: var(--transition);
-  padding: 8px 0;
-}
-
-.ver-detalles:hover {
-  color: var(--blue-light);
-  transform: translateX(4px);
-}
 
 .footer {
   background: var(--text-dark);

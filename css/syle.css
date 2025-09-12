@@ -1,6 +1,7 @@
 /* Importar archivos base */
 @import url('variables.css');
 @import url('common.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 /* HEADER - Estilos importados desde common.css */
 
@@ -140,6 +141,7 @@
 }
 
 .recommendations h2 {
+  font-family: 'Inter', sans-serif;
   font-size: 5rem;
   font-weight: 900;
   margin-bottom: 2rem;
