@@ -1,3 +1,5 @@
+﻿/* Estilos específicos para el detalle del producto 1 - MTG-B2000YST-1A */
+
 /* Importar variables globales */
 @import url('../variables.css');
 
@@ -67,9 +69,6 @@ body {
 .navigation a:hover::after {
   width: 100%;
 }
-
-
-
 
 /* Product Detail Section */
 .product-detail {
@@ -160,6 +159,7 @@ body {
   display: flex;
   gap: 15px;
   justify-content: center;
+  margin-bottom: 30px;
 }
 
 .thumbnail-img {
@@ -433,6 +433,11 @@ input[type="radio"]:checked + .thumbnail-img {
   flex-wrap: wrap;
 }
 
+/* Ocultar los radio buttons de grabado */
+.engraving-radio-group input[type="radio"] {
+  display: none;
+}
+
 .engraving-option {
   display: flex;
   align-items: center;
@@ -451,14 +456,11 @@ input[type="radio"]:checked + .thumbnail-img {
   background: var(--bg-light);
 }
 
-.engraving-option.active {
+/* Estilo cuando el radio button está seleccionado */
+.engraving-radio-group input[type="radio"]:checked + .engraving-option {
   border-color: var(--primary-color);
   background: var(--primary-color);
   color: var(--white);
-}
-
-.engraving-option input[type="radio"] {
-  display: none;
 }
 
 .radio-custom {
@@ -471,12 +473,13 @@ input[type="radio"]:checked + .thumbnail-img {
   transition: var(--transition);
 }
 
-.engraving-option.active .radio-custom {
+/* Estilo del radio-custom cuando está seleccionado */
+.engraving-radio-group input[type="radio"]:checked + .engraving-option .radio-custom {
   border-color: var(--white);
   background: var(--white);
 }
 
-.engraving-option.active .radio-custom::after {
+.engraving-radio-group input[type="radio"]:checked + .engraving-option .radio-custom::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -492,6 +495,17 @@ input[type="radio"]:checked + .thumbnail-img {
   position: relative;
   max-width: 300px;
   margin-top: 15px;
+  display: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+/* Mostrar la caja de texto cuando "Personalizado" está seleccionado */
+#engraving-custom:checked ~ .engraving-input {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .engraving-input input {
@@ -527,9 +541,32 @@ input[type="radio"]:checked + .thumbnail-img {
   margin-bottom: 15px;
 }
 
+/* Estilos para la sección de colores debajo de las imágenes */
+.product-images .strap-colors {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow-light);
+  margin-top: 20px;
+}
+
+.product-images .strap-colors h4 {
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
 .color-options {
   display: flex;
   gap: 20px;
+  justify-content: center;
+}
+
+/* Ocultar los radio buttons */
+.color-options input[type="radio"] {
+  display: none;
 }
 
 .color-option {
@@ -548,13 +585,14 @@ input[type="radio"]:checked + .thumbnail-img {
   border-color: var(--primary-color);
 }
 
-.color-option.active {
+/* Estilo cuando el radio button está seleccionado */
+.color-options input[type="radio"]:checked + .color-option {
   background-color: var(--primary-color);
   color: var(--white);
   border-color: var(--primary-color);
 }
 
-.color-option.active .color-swatch {
+.color-options input[type="radio"]:checked + .color-option .color-swatch {
   border: 3px solid var(--white);
   transform: scale(1.1);
 }
@@ -573,11 +611,11 @@ input[type="radio"]:checked + .thumbnail-img {
 }
 
 .color-swatch.brown {
-  background: #116537;
+  background: #020554;
 }
 
 .color-swatch.blue {
-  background: #274ab9;
+  background: #a8a9ac;
 }
 
 .color-option span {
@@ -627,10 +665,6 @@ input[type="radio"]:checked + .thumbnail-img {
   color: var(--primary-color);
 }
 
-
-
-
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .header-container {
@@ -679,8 +713,6 @@ input[type="radio"]:checked + .thumbnail-img {
   .thumbnails {
     justify-content: center;
   }
-
-
 }
 
 @media (max-width: 480px) {
@@ -710,7 +742,6 @@ input[type="radio"]:checked + .thumbnail-img {
     padding: 12px 20px;
     font-size: 14px;
   }
-
 
   .thumbnails {
     gap: 10px;
@@ -777,22 +808,47 @@ input[type="radio"]:checked + .thumbnail-img {
   text-align: center;
 }
 
+/* Carrusel con barra de desplazamiento */
 .products-carousel {
   position: relative;
   overflow: hidden;
-  padding: 0 60px;
+  padding: 20px 0;
 }
 
 .carousel-container {
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   border-radius: 12px;
+  padding: 10px 0;
+  /* Estilos personalizados para la barra de desplazamiento */
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) var(--bg-light);
+}
+
+.carousel-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel-container::-webkit-scrollbar-track {
+  background: var(--bg-light);
+  border-radius: 4px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.carousel-container::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
 }
 
 .carousel-track {
   display: flex;
   gap: 30px;
-  transition: transform 0.3s ease;
   padding: 20px 0;
+  min-width: max-content;
 }
 
 .product-card {
@@ -802,107 +858,237 @@ input[type="radio"]:checked + .thumbnail-img {
   box-shadow: var(--shadow-light);
   overflow: hidden;
   transition: var(--transition);
+  border: 2px solid transparent;
+  padding: 20px;
+  text-align: center;
 }
 
 .product-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-medium);
+  border-color: var(--primary-color);
 }
 
-.product-image {
-  height: 200px;
-  overflow: hidden;
-  position: relative;
-}
-
-.product-image img {
+.product-card img {
   width: 100%;
-  height: 100%;
+  height: 200px;
   object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
   transition: var(--transition);
 }
 
-.product-card:hover .product-image img {
+.product-card:hover img {
   transform: scale(1.05);
 }
 
-.product-info {
+.product-card h3 {
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.product-card .model {
+  color: var(--text-light);
+  font-size: 14px;
+  margin: 0 0 10px 0;
+  font-weight: 500;
+}
+
+.product-card .price {
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+}
+
+/* BOTÓN DE VER DETALLES - Estilo del catálogo */
+.ver-detalles {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 8px 0;
+}
+
+.ver-detalles:hover {
+  color: var(--blue-light);
+  transform: translateX(4px);
+}
+
+.you-may-also-like .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.you-may-also-like h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Carrusel con barra de desplazamiento */
+.products-carousel {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.carousel-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 12px;
+  padding: 10px 0;
+  /* Estilos personalizados para la barra de desplazamiento */
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) var(--bg-light);
+}
+
+.carousel-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel-container::-webkit-scrollbar-track {
+  background: var(--bg-light);
+  border-radius: 4px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.carousel-container::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+.carousel-track {
+  display: flex;
+  gap: 30px;
+  padding: 20px 0;
+  min-width: max-content;
+}
+
+.product-card {
+  flex: 0 0 280px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow-light);
+  overflow: hidden;
+  transition: var(--transition);
+  border: 2px solid transparent;
   padding: 20px;
   text-align: center;
 }
 
-.product-info .brand {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--text-light);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 5px;
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--primary-color);
 }
 
-.product-info .model {
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: var(--transition);
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.product-card h3 {
+  color: var(--text-dark);
   font-size: 16px;
   font-weight: 600;
-  color: var(--text-dark);
-  margin-bottom: 10px;
+  margin: 0 0 8px 0;
 }
 
-.product-info .price {
+.product-card .model {
+  color: var(--text-light);
+  font-size: 14px;
+  margin: 0 0 10px 0;
+  font-weight: 500;
+}
+
+.product-card .price {
+  color: var(--primary-color);
   font-size: 18px;
   font-weight: 700;
-  color: var(--primary-color);
-  margin-bottom: 15px;
-  display: block;
+  margin: 0 0 15px 0;
 }
 
+/* BOTÓN DE VER DETALLES - Estilo del catálogo */
 .ver-detalles {
+  display: inline-block;
+  margin-top: 1rem;
   color: var(--primary-color);
+  font-weight: 600;
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
+  cursor: pointer;
   transition: var(--transition);
-  position: relative;
+  padding: 8px 0;
 }
 
 .ver-detalles:hover {
-  color: var(--secondary-color);
+  color: var(--blue-light);
+  transform: translateX(4px);
+}
+
+.footer {
+  background: var(--text-dark);
+  color: var(--white);
+  padding: 40px 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.company-name h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.copyright p,
+.contact-email p {
+  color: #94a3b8;
+  font-size: 14px;
+  margin: 0;
+}
+
+.developer-link a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+.developer-link a:hover {
+  color: var(--white);
   text-decoration: underline;
 }
-
-.carousel-prev,
-.carousel-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  background: var(--white);
-  border: 2px solid var(--primary-color);
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  color: var(--primary-color);
-  transition: var(--transition);
-  box-shadow: var(--shadow-light);
-  z-index: 10;
-}
-
-.carousel-prev {
-  left: 10px;
-}
-
-.carousel-next {
-  right: 10px;
-}
-
-.carousel-prev:hover,
-.carousel-next:hover {
-  background: var(--primary-color);
-  color: var(--white);
-  transform: translateY(-50%) scale(1.1);
-}
-
-
