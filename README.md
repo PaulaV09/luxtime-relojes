@@ -305,11 +305,11 @@ Pagina de reloj/
 
 
 
-## Netifly
+## Netlify
 
-
+https://luxtimerelojes.netlify.app/
 
 ## ✍️ Autores
 
-Desarrollado por: Valentina Mancilla
+Desarrollado por: Valentina Mancilla 
 
