@@ -40,6 +40,131 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+/* Hero Section Responsive Improvements */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+    min-height: auto;
+  }
+  
+  .hero-text {
+    max-width: 100%;
+    margin-left: 0;
+    margin-top: 40px;
+    order: 2;
+  }
+  
+  .carousel {
+    order: 1;
+    position: relative;
+    height: 300px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 20px;
+    min-height: auto;
+  }
+  
+  .hero-text {
+    margin-top: 20px;
+  }
+  
+  .subtitle {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  
+  .product-code {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .learn-more {
+    padding: 15px 40px;
+    font-size: 14px;
+    width: auto;
+    display: inline-block;
+  }
+  
+  .carousel {
+    height: 250px;
+  }
+  
+  .recommendations {
+    padding: 60px 20px;
+  }
+  
+  .recommendations h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .product-grid {
+    gap: 20px;
+    padding: 15px 0;
+  }
+  
+  .product-card {
+    flex: 0 0 250px;
+    min-width: 250px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 30px 15px;
+  }
+  
+  .subtitle {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+  
+  .product-code {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .learn-more {
+    padding: 12px 30px;
+    font-size: 13px;
+  }
+  
+  .carousel {
+    height: 200px;
+  }
+  
+  .recommendations {
+    padding: 40px 15px;
+  }
+  
+  .recommendations h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .product-card {
+    flex: 0 0 220px;
+    min-width: 220px;
+    padding: 15px;
+  }
+  
+  .product-card h3 {
+    font-size: 16px;
+  }
+  
+  .price {
+    font-size: 18px;
+  }
+}
+
 .subtitle {
   font-size: 48px;
   font-weight: 700;

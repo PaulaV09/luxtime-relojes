@@ -132,6 +132,8 @@ body {
   transition: var(--transition);
   background: var(--white);
   outline: none;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .form-group input:focus,
@@ -264,16 +266,25 @@ body {
 @media (max-width: 1200px) {
   .form-header h1 {
     text-align: center;
-    font-size: 36px;
+    font-size: 3rem;
   }
   
   .contact-info-container {
     grid-template-columns: 1fr;
     gap: 30px;
+    padding: 0 30px;
+  }
+  
+  .contact-form-container {
+    padding: 50px 40px;
   }
 }
 
 @media (max-width: 768px) {
+  .contact-section {
+    padding: 60px 0;
+  }
+  
   .contact-container {
     padding: 0 20px;
   }
@@ -283,11 +294,32 @@ body {
   }
   
   .form-header h1 {
-    font-size: 28px;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .contact-form {
+    gap: 20px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 16px 20px;
+    font-size: 16px;
+  }
+  
+  .submit-btn {
+    padding: 18px 40px;
+    font-size: 16px;
+    margin-top: 20px;
   }
   
   .contact-info-container {
     padding: 0 20px;
+  }
+  
+  .contact-info-section {
+    padding: 50px 0;
   }
   
   .top-header {
@@ -305,22 +337,58 @@ body {
     padding: 40px 0;
   }
   
+  .contact-container {
+    padding: 0 15px;
+  }
+  
+  .contact-form-container {
+    padding: 25px 15px;
+  }
+  
   .form-header h1 {
-    font-size: 24px;
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+  
+  .contact-form {
+    gap: 18px;
+  }
+  
+  .form-group label {
+    font-size: 13px;
+    margin-bottom: 6px;
   }
   
   .form-group input,
   .form-group textarea {
-    padding: 12px 15px;
-    font-size: 14px;
+    padding: 14px 18px;
+    font-size: 16px; /* Evitar zoom en iOS */
+    border-radius: 15px;
+  }
+  
+  .form-group textarea {
+    min-height: 100px;
   }
   
   .submit-btn {
-    padding: 15px 30px;
-    font-size: 14px;
+    padding: 16px 30px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 15px;
   }
   
   .contact-info-section {
     padding: 40px 0;
+  }
+  
+  .contact-info-container {
+    padding: 0 15px;
+    gap: 25px;
+  }
+  
+  .contact-details h3,
+  .social-media-section h3 {
+    font-size: 16px;
   }
 }

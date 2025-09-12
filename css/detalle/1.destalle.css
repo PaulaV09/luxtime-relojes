@@ -671,6 +671,34 @@ input[type="radio"]:checked + .thumbnail-img {
     flex-direction: column;
     gap: 20px;
   }
+  
+  .product-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 20px;
+  }
+  
+  .product-images {
+    order: 1;
+  }
+  
+  .product-info {
+    order: 2;
+  }
+  
+  .main-image {
+    padding: 20px;
+  }
+  
+  .thumbnail-images {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 10px;
+  }
+  
+  .thumbnail {
+    flex: 0 0 80px;
+  }
 
   .navigation {
     gap: 20px;

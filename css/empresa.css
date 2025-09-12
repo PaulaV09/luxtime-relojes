@@ -554,48 +554,77 @@
 @media (max-width: 1200px) {
     .mosaic-row {
         flex-wrap: wrap;
+        justify-content: center;
     }
     
     .mosaic-item.large-vertical,
     .mosaic-item.large-horizontal {
         flex: 1;
         height: 250px;
+        max-width: 350px;
+    }
+    
+    .timeline-event {
+        margin-bottom: 60px;
+    }
+    
+    .event-content {
+        padding: 50px 40px;
+        margin: 0 40px;
     }
 }
 
 @media (max-width: 768px) {
+    .empresa-hero {
+        height: auto;
+        padding: 80px 0;
+    }
+    
     .hero-content h1 {
         font-size: 3.5rem;
+        line-height: 1.1;
     }
     
     .hero-content .subtitle {
         font-size: 1.4rem;
     }
     
+    .hero-content .description {
+        font-size: 1rem;
+    }
+    
     .section-header h1 {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
     
     .section-header h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
+    }
+    
+    .section-header p {
+        font-size: 1.1rem;
     }
     
     .timeline-nav {
-        gap: 10px;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     
     .timeline-nav-btn {
-        padding: 12px 20px;
-        font-size: 1rem;
+        padding: 10px 18px;
+        font-size: 0.9rem;
     }
     
     .timeline-event {
         flex-direction: column !important;
         text-align: center;
+        margin-bottom: 50px;
     }
     
     .event-content {
-        margin: 30px 0;
+        margin: 20px 0;
+        padding: 30px 20px;
     }
     
     .event-content::after {
@@ -603,56 +632,134 @@
     }
     
     .timeline-progress {
-        left: 30px;
+        left: 20px;
         transform: none;
+        width: 4px;
     }
     
     .event-year {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+        padding: 20px 30px;
+        font-size: 1.5rem;
+        min-width: 120px;
+    }
+    
+    .event-content h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .event-content p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
     }
     
     .mosaic-row {
         flex-direction: column;
         align-items: center;
+        gap: 15px;
     }
     
     .mosaic-item,
     .mosaic-item.large-vertical,
     .mosaic-item.large-horizontal {
         width: 100%;
-        max-width: 400px;
-        height: 250px;
+        max-width: 350px;
+        height: 200px;
         flex: none;
+    }
+    
+    .gallery-section {
+        padding: 80px 0;
+    }
+    
+    .mosaic-gallery {
+        margin-top: 50px;
     }
 }
 
 @media (max-width: 480px) {
+    .empresa-hero {
+        padding: 60px 0;
+    }
+    
     .hero-content h1 {
         font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-content .subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .hero-content .description {
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-cta {
+        padding: 15px 30px;
+        font-size: 1rem;
     }
     
     .section-header h1 {
-        font-size: 3rem;
-    }
-    
-    .section-header h2 {
         font-size: 2.5rem;
     }
     
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .section-header p {
+        font-size: 1rem;
+    }
+    
     .event-content {
-        padding: 40px 20px;
+        padding: 25px 15px;
+    }
+    
+    .event-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .event-content p {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .event-year {
+        padding: 15px 25px;
+        font-size: 1.2rem;
+        min-width: 100px;
     }
     
     .timeline-nav-btn {
-        padding: 10px 15px;
-        font-size: 0.9rem;
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .mosaic-item,
+    .mosaic-item.large-vertical,
+    .mosaic-item.large-horizontal {
+        height: 180px;
+        max-width: 300px;
     }
     
     .mosaic-content h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     
     .mosaic-content p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+    }
+    
+    .gallery-section {
+        padding: 60px 0;
+    }
+    
+    .mosaic-gallery {
+        margin-top: 40px;
     }
 }
