@@ -305,7 +305,7 @@ Pagina de reloj/
 
 
 
-## Netifly
+## Netlify
 
 https://luxtimerelojes.netlify.app/
 
