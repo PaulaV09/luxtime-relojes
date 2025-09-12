@@ -172,13 +172,45 @@ Pagina de reloj/
 
 ![](https://i.ibb.co/nhkV8ZC/Lux-Time-Wireframe-pdf.png)
 
+
+
+
+
+
 ![](https://i.ibb.co/FGRWpwt/Wireframe-Cat-logo-de-Relojes-pdf.png)
+
+
+
+
+
+
 
 ![](https://i.ibb.co/PZ8WTbdQ/Lux-Time-Product-Page-Wireframe-pdf.png)
 
+
+
+
+
+
 ![](https://i.ibb.co/cKzt0hhH/Wireframe-Historia-de-la-Empresa-Lux-Time-pdf.png)
 
+
+
+
+
+
+
+
+
 ![](https://i.ibb.co/fVHrN5rT/Wireframe-Lux-Time-Contacto-pdf.png)
+
+
+
+
+
+
+
+
 
 ## Netifly
 
