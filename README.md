@@ -171,7 +171,56 @@ Pagina de reloj/
 ## Wireframe
 
 
+
+
+
+
 ![](https://i.ibb.co/nhkV8ZC/Lux-Time-Wireframe-pdf.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
